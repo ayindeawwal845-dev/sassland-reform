@@ -1,1 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sassland reform</title>
+    <link rel="stylesheet" href="../Fonts/css/all.min.css">
+    <style>
+        :root{
+            --font-family: segoe, san-serif;
+            --bg-color: orangered; 
+            --font-size-md: 1.2rem;
+            --color: orangered;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            /* border-bottom: 1px solid white; */
+            background-color: black;
+            height: 20px;
+            width: 100%;
+            /* justify-items: center; */
+            text-align: left;
+            /* left: 20px; */
+            /* padding: 40px; */
+            /* margin: 20px; */
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            padding: 20px 5%;
+            gap: 400px;
+            position: fixed;
+        }
+        .box h1{
+            text-align: start;
+            /* justify-content: left; */
+            /* background-color: var(--bg-color); */
+            color: var(--color);
+            margin-left: 100px;
+        }
+        .link{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            /* justify-content: center */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .link li{
+            display: inline;
+        }
+        .link span{
+            color: orange;
+        }
+        .link a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .link a:hover{
+            color: orange;
+        }
+        .pop{
+            /* border: 1px solid rgb(215, 19, 19); */
+            width: fixed;
+            height: fixed;
+            justify-items: center;
+            padding: 100px;
+            text-align: center;
+            background-color: black;
+            justify-content: center;
+        }
+        .stop{
+            /* border: 2px solid orange; */
+            /* height: 30px; */
+            /* width: 200px; */
+            border-radius: 50px;
+            /* text-align: center; */
+            align-self: center;
+            /* color: orangered; */
+            background-color: orangered;
+            font-size: 20px;
+            color: lightblue;
+            opacity: 0.8;
+            margin-bottom: 20px;
+            
 
+        }
+        
+        .pop h1{
+            font-size: 70px;
+            color: white;
+            /* margin: -20px; */
+            /* padding: -20px; */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .Solution{
+            color: orange;
+        }
+        .pop h2{
+            color: white;
+            margin: -20px;
+            padding: -20px;
+            justify-content: space-between;
+            font-size: 20PX;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            gap: 20px;               
+            margin-top: 50px;        
+        }
+
+        .btn {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px;
+            border-radius: 30px;
+            /* cursor: pointer; */
+            /* transition: all 0.3s ease; */
+            margin: 30px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #ff7a00, #ff9900);
+            color: white;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #ff9900, #ff7a00);
+            /* transform: translateY(-2px); */
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #ff9900;
+            color: #ff9900;
+            border-radius: 15px;
+        }
+
+        .btn-outline:hover {
+            background: #ff9900;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .imggg{
+            /* width: auto; */
+            /* height: 20px; */
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 15px;
+            /* margin: auto; */
+            margin-top: 40px;
+            /* margin-left: 400px; */
+        }
+
+        .imggg-items{
+            display: flex;
+        }
+        
+        .imggg-items img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-left: -10px;
+        }
+        .imggg p{
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .imggg span{
+            color: orange;
+        }
+
+        .opp{
+            border: 1px solid orange;
+            position: relative;
+            background-color:rgb(39, 39, 39);
+            padding: 10px;
+            border-radius: 15px;
+            display: inline-block;
+            max-width: 700px;
+        }
+        .opp img{
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+        .mordern{
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            background-color: #ff7a00;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+        
+        .features{
+            border: 1px solid white;
+            background-color: black;
+            text-align: center;
+            padding: 100px 50px;
+        }
+        .features-head{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        .features-head span{
+            color: #ff7a00;
+        }
+        .features-subtitle{
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin: 15px auto 60px;
+            /* max-width: 700px; */
+        }
+        .features-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 80px;
+            justify-items: center;
+        }
+        .features-card{
+            background-color: #1b1b1b;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .features-card:hover{
+            /* transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(255, 122, 0, 0.2); */
+            border: 0.1px solid orange;
+        }
+        .features-card h3{
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .features-card p{
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .icon{
+            background-color: #2a1a0a;
+            color: #ff7a00;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .Simple{
+            border: 2px solid rgb(248, 246, 246);
+            background-color: black;
+            /* justify-content: center; */
+            text-align: center;
+            padding: 200px;
+            /* gap: 5px; */
+            margin: 0;
+            /* margin-top: 50px; */
+        }
+        .Simple h1{
+            /* padding: 200px; */
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+        .Simple p{
+            color: white;
+            /* padding: -90px; */
+            margin-top: 0;
+            /* top: 30px; */
+        }
+        .Simple span{
+            color: orange;
+        }
+        .annual{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 10px;
+            justify-content: center;
+        }
+        .on{
+            border: 2px solid;
+            width: 45px;
+            height: 20px;
+            /* min-height: 80px; */
+            /* max-height: 40px; */
+            border-radius: 10px;
+            background-color: #9ca3af;
+        }
+        .on:hover{
+            background-color:orange;
+        }
+        .Starter{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            /* border: 2px solid pink; */
+            width: auto;
+            height: auto;
+
+        }
+        .Starter-icon{
+            border: 2px solid purple;
+            background-color: rgb(34, 34, 34);
+            /* border-color: pink; */
+            /* border-bottom-color: red; */
+            width: 300px;
+            height: 700px;
+            margin-top: 50px;
+            border-radius: 20px;
+            text-align: left;
+            padding: 20px;
+            /* gap: 20px; */
+        }
+        .Starter-box{
+            border: 2px solid orange;
+            background-color: orange;
+            width: 100px;
+            height: 20px;
+            /* border-bottom: orange; */
+            /* bottom background-color: pink; */
+            border-radius: 10px;
+            color: black;
+            top: 10px;
+            /* padding-bottom: 20px; */
+            margin: 20px;
+            margin-top: 50px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Starter-icon h4{
+            color: white;
+            font-size: 30px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* padding: 40px; */
+            margin-bottom: 10px;
+            /* gap: 20px; */
+        }
+        .Starter-icon h3{
+            color: white;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .Starter-icon p{
+            margin-top: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+        }
+        .start{
+            text-align: left;
+        }
+        .start li{
+            color: white;
+            list-style: none;
+            padding: 15px;
+        }
+        .with{
+            border: 1px solid orange;
+            background-color: rgb(40, 38, 36);
+            /* justify-content: center; */
+            /* justify-items: center; */
+            /* text-align: center; */
+            border-radius: 10px;
+            /* align-items: center; */
+            width: 40vh;
+            height: 30px;
+            text-align: center;
+            /* top: 20px; */
+        }
+        .with p{
+            text-align: center;
+            /* padding-left: 5px; */
+            padding-top: 6px;
+            /* color: red; */
+        }
+        .with:hover{
+            background-color: orange;
+        }
+        .dope{
+            border: 1px solid orange;
+            background-color: rgb(40, 38, 36);
+            border-radius: 10px;
+            /* justify-content: center; */
+            justify-self: center;
+            /* padding: 20px; */
+            margin: 55px;
+            width: 40vh;
+            height: 30px;
+            text-align: center;
+            /* display: flex; */
+            margin-left:15px;
+            /* margin-right: 10px; */
+        }
+        .dope p{
+            text-align: center;
+            /* padding-left: 5px; */
+            padding-top: 6px;
+            /* color: red; */
+        }
+        .dope:hover{
+            background-color:orange;
+        }
+        
+        .testimonials {
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 80px 0;
+        }
+
+        .testimonials h1 {
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        .testimonials h1 span {
+            color: orange;
+        }
+
+        .testimonials p {
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .testimonial-container {
+            margin-top: 60px;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        .stars {
+            color: orange;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .review {
+            font-style: italic;
+            color: #d3d3d3;
+            margin-bottom: 25px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .profile h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .profile span {
+            color: #999;
+            font-size: 14px;
+        }
+
+        body{
+            background: black;
+        }
+        .faq-container {
+            border: 1px solid white;
+            width: 60%;
+            margin: 60px auto;
+            padding: 300px;
+            padding-bottom: 90px;
+            /* background-color: #fff; */
+            /* color: black ; */
+        }
+
+        .faq-container h1 {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .faq-container h1 span {
+            color: orange;
+        }
+
+        .faq-container p {
+            text-align: center;
+            color: #b7b7b7;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background: #1a1a1a;
+            margin: 10px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "▾";
+            font-size: 18px;
+        }
+
+        .faq-question.active::after {
+            content: "▴";
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            background: #1f1f1f;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: #ccc;
+        }
+
+        .cta-main{
+            background: #1b1b1b;
+            font-family: Arial, sans-serif;
+            /* width: 500px; */
+            /* height: 800px; */
+        }
+
+        .cta-section {
+            width: 80%;
+            margin: 80px auto;
+            background: linear-gradient(135deg, #4b2e14, #6b431c, #573718);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .cta-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+   
+        .cta-text {
+            width: 55%;
+        }
+
+        .cta-text h2 {
+            color: #fff;
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-text p {
+            color: #d4d4d4;
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-orange {
+            background: #ff7a1c;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-orange:hover{
+            background-color: rgb(238, 155, 1);
+        }
+
+        .btn-dark {
+            background: #111;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-dark:hover{
+            background-color: white;
+            color: #1f1f1f;
+        }
+
+        /* MODAL STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #1b1b1b;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    border: 1px solid orangered;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    background: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+        .cta-image img {
+            width: 320px;
+            height: 240px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .contact {
+    background-color: #0d0d0d;
+    padding: 100px 0;
+    border-top: 1px solid #1f1f1f;
+}
+ 
+.contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+ 
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+ 
+.contact-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ 
+.contact-header h2 span {
+    color: #ff7a00;
+}
+ 
+.contact-header p {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    max-width: 580px;
+    margin: 16px auto 0;
+    line-height: 1.7;
+}
+ 
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+ 
+/* Info cards */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.contact-info-card {
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: border-color 0.2s;
+}
+ 
+.contact-info-card:hover {
+    border-color: #ff7a00;
+}
+ 
+.contact-icon {
+    background: #2a1a0a;
+    color: #ff7a00;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+ 
+.contact-info-card h4 {
+    color: #fff;
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+}
+ 
+.contact-info-card p {
+    color: #9ca3af;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+ 
+/* Form */
+.contact-form {
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+ 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.form-group label {
+    color: #d1d5db;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+ 
+.req {
+    color: #ff7a00;
+}
+ 
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    resize: vertical;
+}
+ 
+.form-group select option {
+    background: #1b1b1b;
+    color: #fff;
+}
+ 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff7a00;
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
+}
+ 
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+    border-color: #e74c3c;
+}
+ 
+.field-error {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    min-height: 16px;
+}
+ 
+/* Checkbox row */
+.form-checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.form-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ff7a00;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+ 
+.form-checkbox label {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+ 
+/* Submit button */
+.contact-submit {
+    background: linear-gradient(90deg, #ff7a00, #ff9900);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    align-self: flex-start;
+}
+ 
+.contact-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+ 
+.contact-submit:active {
+    transform: translateY(0);
+}
+ 
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+ 
+/* Success / error banners */
+.form-banner {
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.success-banner {
+    background: rgba(39, 174, 96, 0.15);
+    border: 1px solid #27ae60;
+    color: #2ecc71;
+}
+ 
+.error-banner {
+    background: rgba(231, 76, 60, 0.15);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+ 
+/* Responsive */
+@media (max-width: 860px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+ 
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+ 
+    .contact-info-card {
+        flex: 1 1 200px;
+    }
+ 
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 40px 20px;
+            font-family: sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            color: orange;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 6px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: orange;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #ccc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .footer-bottom span {
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="box">
+        <h1>Sassland</h1>
+        <ul class="link">
+           <li><a href=""><span>Home</span></a></li>
+           <li><a href="">Roadmap</a></li>
+           <li><a href="">Pricing</a></li>
+           <li><a href="">Contact</a></li>
+           <li><a href=""><span>Blog</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="pop">
+        <div class="stop">Introducing Sassland 2.0</div>
+        <h1>Transform Your Business <br>With our <span class="Solution">SaaS Solution</span></h1>
+        <h2>Streamline your operationS, boost productivity, and enhance customer <br>sastifaction with our cutting-edge SaaS platform. Experience seamless <br>integration and Unparalled support.</h2>
+        <div class="button-group">
+            <button class="btn btn-primary" id="startFreeBtn">Get Started Free <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="btn btn-outline">Book Demo</button>
+        </div>
+          <div class="imggg">
+            <div class="imggg-items">
+                <img src="Three women standing.jpg" alt="">
+                <img src="Three women standing.jpg" alt="">
+                <img src="Three women standing.jpg" alt="">
+            </div>
+            <p><span>500+</span> business already using our platform</p>
+        </div>
+        
+        <div class="opp">
+             <img src="opp.avif" alt=>
+             <div class="mordern">Mordern Dashboard interface</div>
+        </div>
+        
+    </div>
+    <section class="features">
+        <h2 class="features-head">
+            Powerful <span>Features</span> to Boost Your Business
+        </h2>
+        <p class="features-subtitle"> Our comprehensive suite of tools will help you streamline operations and achieve your business goals more <br>efficiently.</p>
+
+        <div class="features-grid">
+            <div class="features-card">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Smart Analytics</h3>
+                <p>Gain valuable insights with our advanced analytics, helping you make data-driven decisions.</p>
+            </div>
+
+            <div class="features-card">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Easy Integration</h3>
+                <p>Seamlessly integrate with your existing tools and workflows. No distruption to your business.</p>
+            </div>
+
+            <div class="features-card">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>User Management</h3>
+                <p>Powerful user management and permission controls to keep your data secure and accessible.</p>
+            </div>
+
+            <div class="features-card">
+                <div class="icon"><i class="fa-regular fa-house"></i></div>
+                <h3>Customizable Dashboard</h3>
+                <p>Create a dashboards tailored to your specific needs and buiness goals.</p>
+            </div>
+
+            <div class="features-card">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Smart Analytics</h3>
+                <p>Gain valuable insights with our advanced analytics, helping you make data-driven decisions.</p>
+            </div>
+
+            <div class="features-card">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Smart Analytics</h3>
+                <p>Gain valuable insights with our advanced analytics, helping you make data-driven decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="Simple">
+        <h1>Simple, <span>Transparent</span> Pricing</h1>
+        <p>Choose the plan that fits your business needs. No hidden fees, no surprises.</p>
+        <div class="annual">
+            <p>Annual (save 20%)</p>
+            <div class="on">
+                
+            </div>
+            <p>Monthly</p>
+        </div>
+        <div class="Starter">
+            <div class="Starter-icon">
+                <h4>Starter</h4>
+                <p>Perfect for small businesses and freelancers</p>
+                <h3>$15 /month</h3>
+                <ul class="start">
+                    <li>2 team members</li>
+                    <li>20GB cloud storage</li>
+                    <li>Basic analytics</li>
+                    <li>Email support</li>
+                    <li>1 project</li>
+                </ul>
+                <div class="with"><p>Start with starter</p></div>
+            </div>
+
+             <div class="Starter-icon">
+                <div class="Starter-box">
+                    most popular
+                </div>
+                <h4>Professional</h4>
+                <p>Great for growing businesses and teams</p>
+                <h3>$39 /month</h3>
+                <ul class="start">
+                    <li>10 team members</li>
+                    <li>100GB cloud storage</li>
+                    <li>Advance analytics</li>
+                    <li>Unlimited project</li>
+                    <li>Priorty Email support</li>
+                    <li>Unlimited project</li>
+                    <li>Api access</li>
+                    <li>Custom integration</li>
+                </ul>
+            </div>
+            
+             <div class="Starter-icon">
+                <h4>Enterprise</h4>
+                <p>For large organisations with complex needs</p>
+                <h3>$79 /month</h3>
+                <ul class="start">
+                    <li>Unlimited team members</li>
+                    <li>500GB cloud storage</li>
+                    <li>Advance analytics & reporting</li>
+                    <li>24/7 dedicated support</li>
+                    <li>Unlimited project</li>
+                    <li>Full API access</li>
+                    <li>Custom integration</li>
+                    <li>SSO Authentication</li>
+                    <li>dedicated account manager</li>
+                    <div class="dope"><p>contact sale</p></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="testimonials">
+        <h1>Trusted by <span>Innovative</span> Companies</h1>
+        <p>Don't just take our word for it. Here's what our customers have to say about Sassland.</p>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="review">
+                    "Implementing Sassland has been a game-changer for our team. The intuitive interface
+                    and powerful features have significantly improved our productivity and collaboration.”
+                </p>
+                <div class="profile">
+                    <img src="portrait-man-suit-tie_86390-3854.jpg">
+                    <div>
+                        <h3>Sarah Johnson</h3>
+                        <span>CTO, TechSolutions Inc.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="review">
+                    "The customer support team at Sassland is exceptional. They’ve been incredibly responsive
+                    and helped us optimize our workflow to get the most out of the platform.”
+                </p>
+                <div class="profile">
+                    <img src="portrait-man-suit-tie_86390-3854.jpg">
+                    <div>
+                        <h3>Michael Chen</h3>
+                        <span>Operations Director, Nexus Corp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="review">
+                    "We've tried several SaaS platforms before, but Sassland offers the perfect balance of
+                    functionality and ease of use. It's become an essential part of our daily operations.”
+                </p>
+                <div class="profile">
+                    <img src="portrait-man-suit-tie_86390-3854.jpg">
+                    <div>
+                        <h3>Emily Rodriguez</h3>
+                        <span>Product Manager, Innovation Labs</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="faq-container">
+        <h1>Frequently Asked <span>Questions</span></h1>
+        <p>Find answers to common questions. If you can't find what you're looking for, contact our support team.</p>
+
+        <div class="faq-item">
+            <button class="faq-question">How does the free trial work?</button>
+            <div class="faq-answer">
+                <p>The free trial lasts 14 days with full access.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I change my plan later?</button>
+            <div class="faq-answer">
+                <p>Yes! You can upgrade or downgrade anytime.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Is there a setup fee?</button>
+            <div class="faq-answer">
+                <p>No setup fees required.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you offer custom enterprise solutions? </button>
+            <div class="faq-answer">
+                <p>Yes, contact our team for enterprise options.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What kind of support do you offer?</button>
+            <div class="faq-answer">
+                <p>We offer 24/7 email and chat support.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I cancel my subscription anytime?</button>
+            <div class="faq-answer">
+                <p>Yes, cancel anytime with no penalties.</p>
+            </div>
+        </div>
+    </div>
+    <div class="cta-main">
+        <div class="cta-section">
+            <div class="cta-content">
+
+                <div class="cta-text">
+                    <h2>Ready to transform your business?</h2>
+                    <p>Join thousands of companies that are already streamlining their operations and 
+                    growing their business with Sassland. Start your free trial today.</p>
+
+                    <div class="cta-buttons">
+                        <button class="btn-orange" id="ctaStartFreeBtn">Start Free Trial</button>
+                        <button class="btn-dark" id="ctaDemoBtn">Schedule Demo</button>
+                        <!-- Free Trial Modal -->
+<div id="freeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Get Started Free</h2>
+        <p>No credit card required. Cancel anytime.</p>
+        
+        <input type="text" placeholder="Full Name" class="modal-input">
+        <input type="email" placeholder="Business Email" class="modal-input">
+        <input type="text" placeholder="Company Name" class="modal-input">
+        
+        <button class="btn-orange" style="width:100%; margin-top:20px;">Create Free Account</button>
+    </div>
+</div>
+
+<!-- Schedule Demo Modal -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Schedule a Demo</h2>
+        <p>Let's show you how Sassland can help your business</p>
+        
+        <input type="text" placeholder="Full Name" class="modal-input">
+        <input type="email" placeholder="Work Email" class="modal-input">
+        <input type="text" placeholder="Company Name" class="modal-input">
+        
+        <button class="btn-orange" style="width:100%; margin-top:20px;">Schedule Demo Call</button>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                
+
+                <div class="cta-image">
+                    <img src="image-omelette.jpeg" alt="office">
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- CONTACT SECTION - paste before the footer -->
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <div class="contact-header">
+            <h2>Get in <span>Touch</span></h2>
+            <p>Have a question or want to learn more? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours.</p>
+        </div>
+
+        <div class="contact-layout">
+            <!-- Left: Info Cards -->
+            <div class="contact-info">
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>hello@sassland.io</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 (800) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4>Office</h4>
+                        <p>123 Tech Avenue, San Francisco, CA 94105</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Support Hours</h4>
+                        <p>Mon – Fri, 9am – 6pm PST</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-name">Full Name <span class="req">*</span></label>
+                        <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required>
+                        <span class="field-error" id="err-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Work Email <span class="req">*</span></label>
+                        <input type="email" id="cf-email" name="email" placeholder="jane@company.com" required>
+                        <span class="field-error" id="err-email"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-company">Company Name</label>
+                        <input type="text" id="cf-company" name="company" placeholder="Acme Corp">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-subject">Subject <span class="req">*</span></label>
+                        <select id="cf-subject" name="subject" required>
+                            <option value="" disabled selected>Select a topic</option>
+                            <option value="sales">Sales Enquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="demo">Request a Demo</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="field-error" id="err-subject"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cf-message">Message <span class="req">*</span></label>
+                    <textarea id="cf-message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+                    <span class="field-error" id="err-message"></span>
+                </div>
+
+                <div class="form-group form-checkbox">
+                    <input type="checkbox" id="cf-consent" name="consent">
+                    <label for="cf-consent">I agree to receive emails from Sassland. I can unsubscribe at any time.</label>
+                </div>
+
+                <button type="submit" class="contact-submit" id="contactSubmitBtn">
+                    <span id="submitText">Send Message <i class="fa-solid fa-paper-plane"></i></span>
+                    <span id="submitLoading" style="display:none;">Sending... <i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+
+                <!-- Success / Error banners -->
+                <div class="form-banner success-banner" id="formSuccess" style="display:none;">
+                    <i class="fa-solid fa-circle-check"></i> Message sent! We'll be in touch within 24 hours.
+                </div>
+                <div class="form-banner error-banner" id="formError" style="display:none;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please try again.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+            <h3>Sassland</h3>
+            <p>Transform your business with our cutting-edge SaaS solution designed for modern companies.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            </div>
+
+            <div class="footer-section">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Roadmap</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Features</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a hsref="#">Cookie Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sassland. All rights reserved. Build by Awwal. <br>Distributed by <span>ThemeWagon</span></p>
+        </div>
+</footer>
+<script>
+    
+// =============================================
+// SIMPLE JAVASCRIPT FOR BEGINNERS
+// =============================================
+
+
+
+// 1. FAQ Accordion (Click to open/close questions)
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+        
+        // Check if this question is already open
+        const isActive = this.classList.contains('active');
+        
+        // Close all FAQ answers first
+        faqQuestions.forEach(q => {
+            q.classList.remove('active');
+            q.nextElementSibling.style.maxHeight = null;
+        });
+
+        // If it wasn't open, open it now
+        if (!isActive) {
+            this.classList.add('active');
+            const answer = this.nextElementSibling;
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
+
+
+// 2. Pricing Toggle (Monthly <-> Annual)
+const toggle = document.querySelector('.on');           // The toggle button
+const prices = document.querySelectorAll('.Starter-icon h3'); // All price texts
+
+let isAnnual = false;   // Start with Monthly
+
+toggle.addEventListener('click', function() {
+    
+    isAnnual = !isAnnual;   // Change true/false
+
+    if (isAnnual) {
+        // Show Annual Prices
+        prices[0].textContent = "$144 /year";   // Starter
+        prices[1].textContent = "$374 /year";   // Professional
+        prices[2].textContent = "$758 /year";   // Enterprise
+        toggle.style.backgroundColor = "orangered";
+    } else {
+        // Show Monthly Prices
+        prices[0].textContent = "$15 /month";
+        prices[1].textContent = "$39 /month";
+        prices[2].textContent = "$79 /month";
+        toggle.style.backgroundColor = "#9ca3af";
+    }
+});
+
+
+// 3. Navbar Effect (Becomes smaller when you scroll)
+const navbar = document.querySelector('.box');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        navbar.style.padding = "12px 80px";
+    } else {
+        navbar.style.padding = "20px 80px";
+    }
+});
+
+
+// 4. Smooth Scrolling for Navigation Links (Optional)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();           // Stop jump
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+
+
+// Bottom CTA Buttons
+const ctaFreeBtn = document.getElementById('ctaStartFreeBtn');
+const ctaDemoBtn = document.getElementById('ctaDemoBtn');
+
+const freeModal = document.getElementById('freeModal');
+const demoModal = document.getElementById('demoModal');
+
+const closeBtns = document.querySelectorAll('.close');
+
+// Open Free Trial Modal
+ctaFreeBtn.addEventListener('click', () => {
+    freeModal.style.display = "flex";
+});
+
+// Open Demo Modal
+ctaDemoBtn.addEventListener('click', () => {
+    demoModal.style.display = "flex";
+});
+
+// Close modals
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        freeModal.style.display = "none";
+        demoModal.style.display = "none";
+    });
+});
+
+// Close when clicking outside modal
+window.addEventListener('click', (e) => {
+    if (e.target === freeModal) freeModal.style.display = "none";
+    if (e.target === demoModal) demoModal.style.display = "none";
+});
+
+
+// // 5. Simple Testimonial Auto Slider
+// let current = 0;
+// const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+// function showNextTestimonial() {
+//     // Hide all
+//     testimonialCards.forEach(card => {
+//         card.style.display = "none";
+//     });
+    
+//     // Show next one
+//     current = (current + 1) % testimonialCards.length;
+//     testimonialCards[current].style.display = "block";
+// }
+
+// // Start the slider
+// setInterval(showNextTestimonial, 5000);   // Change every 5 seconds
+
+// // Show the first one when page loads
+// testimonialCards[0].style.display = "block";
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
